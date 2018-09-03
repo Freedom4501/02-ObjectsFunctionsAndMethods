@@ -3,8 +3,8 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Mashengjun Li.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
@@ -17,7 +17,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 #     then select  Mark Directory As  ~  Sources Root.
 #
 ###############################################################################
-
+import math
 import rosegraphics as rg
 
 
@@ -26,11 +26,14 @@ def main():
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
     """
+    answer = hypotenuse(3,4)
+    print(answer)
+
 
 
 ###############################################################################
 #
-# TODO: 3a.  Define a function immediately blow this _TODO_.
+# Done: 3a.  Define a function immediately blow this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -38,10 +41,13 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# Done: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
+def hypotenuse(side1, side2):
+    side3 = math.sqrt(side1**2 + side2**2)
+    return side3
 
 
 ###############################################################################
@@ -72,6 +78,17 @@ def main():
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
+window = rg.TurtleWindow
+ashe = rg.SimpleTurtle('turtle')
+garen = rg.SimpleTurtle('turtle')
+ashe.pen = rg.Pen('green')
+garen.pen = rg.Pen(5)
+ashe.forward(100)
+garen.backward(100)
+window.close_on_mouse_click(
+
+    main()
+)
 
 
 ###############################################################################

@@ -2034,7 +2034,7 @@ class Pen(object):
        thin_red = rg.Pen('red', 1)
     """
 
-    def __init__(self, color, thickness):
+    def __init__(self, color, thickness=1):
         self.thickness = thickness
         self.color = color
 
