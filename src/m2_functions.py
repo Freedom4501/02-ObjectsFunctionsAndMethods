@@ -29,6 +29,9 @@ def main():
     answer = hypotenuse(3,4)
     print(answer)
 
+    two_turtles('red',20)
+    two_turtles('blue",1')
+
 
 
 ###############################################################################
@@ -46,13 +49,13 @@ def main():
 #
 ###############################################################################
 def hypotenuse(side1, side2):
-    side3 = math.sqrt(side1**2 + side2**2)
-    return side3
+    return math.sqrt(side1**2 + side2**2)
+
 
 
 ###############################################################################
 #
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# Done: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -74,26 +77,27 @@ def hypotenuse(side1, side2):
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# Done: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
-window = rg.TurtleWindow
-ashe = rg.SimpleTurtle('turtle')
-garen = rg.SimpleTurtle('turtle')
-ashe.pen = rg.Pen('green')
-garen.pen = rg.Pen(5)
-ashe.forward(100)
-garen.backward(100)
-window.close_on_mouse_click(
+def two_turtles(color, thickness):
+ window = rg.TurtleWindow()
+ ashe = rg.SimpleTurtle()
+ garen = rg.SimpleTurtle()
+ ashe.pen = rg.Pen('green', thickness)
+ garen.pen = rg.Pen(color, 5)
+ ashe.forward(100)
+ garen.backward(100)
+ window.close_on_mouse_click()
 
-    main()
-)
+main()
+
 
 
 ###############################################################################
 #
-# TODO: 5.
+# Done: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
