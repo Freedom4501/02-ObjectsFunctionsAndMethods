@@ -141,7 +141,7 @@ def draw_circles(point):
 # ###############################################################################
 
 import math
-def better_draw_circles(point):
+def better_draw_circles(point,radius):
     """
     Starts out the same as the   draw_circles   function defined ABOVE.
     You Will make it an IMPROVED, MORE POWERFUL function per the above _TODO_.
@@ -152,16 +152,16 @@ def better_draw_circles(point):
     turtle.go_to(point)
     turtle.set_heading(0) # Point "east" (towards the right)
     for k in range(1, 11):  # k becomes 1, 2, 3, ... 10
-        number = 1 + k
+        radius = radius * 2 + k
         turtle.pen_up()
 
         # Go DOWN 15 pixels, ending up pointing east again
         turtle.right(90)
-        turtle.forward(15)
+        turtle.forward(radius)
         turtle.left(90)
 
         turtle.pen_down()
-        turtle.draw_circle(number * k)  # Radius 15, 30, 45, 60, ...
+        turtle.draw_circle(radius)  # Radius 15, 30, 45, 60, ...
 
 
 ###############################################################################
