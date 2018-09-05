@@ -119,7 +119,7 @@ def draw_circles(point):
 #   Your job is to make
 #       better_draw_circles
 #   "better" than   draw_circles   by adding a PARAMETER for the amount
-#   by which the radii of the concentric circles increase, as described below.
+# #   by which the radii of the concentric circles increase, as described below.
 #
 #   The new   better_draw_circles   function can do the same  thing as
 #   the   draw_circles  function, but additionally allows for the radii to
@@ -140,7 +140,7 @@ def draw_circles(point):
 #
 # ###############################################################################
 
-
+import math
 def better_draw_circles(point):
     """
     Starts out the same as the   draw_circles   function defined ABOVE.
@@ -150,7 +150,6 @@ def better_draw_circles(point):
     turtle.pen_up()
     turtle.go_to(point)
     turtle.set_heading(0)  # Point "east" (towards the right)
-
     for k in range(1, 11):  # k becomes 1, 2, 3, ... 10
 
         turtle.pen_up()
